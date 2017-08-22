@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bulma-hero class="is-primary" title="Vue.js pra quem nunca viu" subtitle="Um exemplo com Bulma.io">
+    <bulma-hero class="is-primary" title="Vue.js pra quem nunca viu!" subtitle="Um exemplo com Bulma.io">
     </bulma-hero>
     <bulma-section class="section">
       <router-view></router-view>

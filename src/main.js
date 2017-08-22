@@ -11,13 +11,6 @@ import './assets/theme.scss';
 
 Vue.config.productionTip = false;
 
-// Vue.directive('focus', {
-//   inserted(el) {
-//     console.log(el);
-//     el.focus();
-//   },
-// });
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

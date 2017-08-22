@@ -1,5 +1,5 @@
 <template>
-  <div class="panel">
+  <div class="panel is-marginless">
     <p class="panel-heading">
       {{ title }}
       <span class="icon" @click="toggle()">
@@ -48,7 +48,7 @@ export default {
 .panel-heading {
   background-color: $primary;
   border: $primary;
-  color: $white;
+  color: $primary-invert;
   display: flex;
   font-weight: bold;
   justify-content: space-between;

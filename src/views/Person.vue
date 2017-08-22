@@ -6,8 +6,12 @@
         <bulma-input v-model="form.age" title="Idade" placeholder="Idade da pessoa" type="number"></bulma-input>
         <bulma-select v-model="form.sex" title="Sexo" placeholder="Sexo da pessoa" :options="domainSex"></bulma-select>
         <div class="field is-grouped">
-          <p class="control"><bulma-button class="is-primary" type="submit">Salvar</bulma-button></p>
-          <p class="control"><bulma-button class="is-primary is-outlined" @click="$refs.form.clear()">Limpar</bulma-button></p>
+          <p class="control">
+            <bulma-button class="is-primary" type="submit">Salvar</bulma-button>
+          </p>
+          <p class="control">
+            <bulma-button class="is-primary is-outlined" @click="$refs.form.clear()">Limpar</bulma-button>
+          </p>
         </div>
       </bulma-form>
       <hr>
@@ -21,9 +25,9 @@
           <small><i>{{ selected[col.name] || 'Nenhum' }}</i></small>
         </h6>
       </div>
-      <template slot="footer">
-        <bulma-button class="is-danger is-outlined is-pulled-right" @click="remove(selected)">Excluir</bulma-button>
-      </template>
+      <bulma-button slot="footer" class="is-danger is-outlined is-pulled-right" @click="remove(selected)">
+        Excluir
+      </bulma-button>
     </bulma-modal>
   </div>
 </template>
@@ -83,16 +87,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-@import '../assets/theme';
-
-body,
-html {
-  height: 100%;
-}
-
-body {
-  background-color: $light;
-}
-</style>
