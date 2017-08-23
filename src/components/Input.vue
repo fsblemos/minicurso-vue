@@ -3,7 +3,8 @@
     <label class="label">{{ title }}</label>
     <div class="control">
       <input class="input"
-             ref="input"
+             ref="control"
+             v-focus="focus"
              :value="value"
              @input="$emit('input', $event.target.value)"
              :placeholder="placeholder"
@@ -19,15 +20,11 @@ export default {
   name: 'input',
   extends: Control,
   props: {
+    focus: Boolean,
     placeholder: String,
     title: String,
     value: [String, Number],
     type: String,
-  },
-  methods: {
-    setFocus() {
-      this.$refs.input.focus();
-    },
   },
 };
 </script>

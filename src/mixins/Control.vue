@@ -8,11 +8,6 @@ export default {
       isControl: true,
     };
   },
-  mounted() {
-    if (this.focus) {
-      this.setFocus();
-    }
-  },
   methods: {
     clear() {
       this.$emit('input', null);
@@ -20,6 +15,9 @@ export default {
       if (this.focus) {
         this.setFocus();
       }
+    },
+    setFocus() {
+      this.$refs.control.focus();
     },
   },
 };
