@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bulma-panel title="Pessoa">
+    <bulma-panel ref="panel" title="Pessoa" v-click-outside="closePanel">
       <bulma-form ref="form" @submit="save()">
         <bulma-input v-model="form.name" title="Nome" placeholder="Nome da pessoa" focus></bulma-input>
         <bulma-input v-model="form.age" title="Idade" placeholder="Idade da pessoa" type="number"></bulma-input>
@@ -83,6 +83,9 @@ export default {
     remove(row) {
       this.rows.splice(this.rows.indexOf(row), 1);
       this.$refs.modal.close();
+    },
+    closePanel() {
+      this.$refs.panel.close();
     },
   },
 };

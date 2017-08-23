@@ -26,6 +26,9 @@ export default {
     };
   },
   methods: {
+    close() {
+      this.opened = false;
+    },
     toggle() {
       this.opened = !this.opened;
     },
