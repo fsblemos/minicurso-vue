@@ -2,6 +2,7 @@
   <div>
     <bulma-panel ref="panel" title="Pessoa" v-click-outside="closePanel">
       <bulma-form ref="form" @submit="save()">
+        {{ form.name }}
         <bulma-input v-model="form.name" title="Nome" placeholder="Nome da pessoa" focus></bulma-input>
         <bulma-input v-model="form.age" title="Idade" placeholder="Idade da pessoa" type="number"></bulma-input>
         <bulma-select v-model="form.sex" title="Sexo" placeholder="Sexo da pessoa" :options="domainSex"></bulma-select>
